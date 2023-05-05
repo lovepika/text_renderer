@@ -25,7 +25,9 @@ class LineState(object):
 
 class Liner(object):
     def __init__(self, cfg):
-        self.linestate: LineState = LineState()
+        # 2023 change by tudou. because invalid syntax on python 3.5.2
+        # self.linestate: LineState = LineState()
+        self.linestate = LineState()
         self.cfg = cfg
 
     def get_line_color(self):
